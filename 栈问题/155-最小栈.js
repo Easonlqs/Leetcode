@@ -12,6 +12,7 @@ var MinStack = function () {
  */
 MinStack.prototype.push = function (val) {
     this.stack.push(val)
+    // 一定要小于等于，可以有多个相同的最小值。所以stack1都要保存下来
     if (this.stack1.length === 0 || val <= this.stack1[this.stack1.length - 1]) {
         this.stack1.push(val)
     }
