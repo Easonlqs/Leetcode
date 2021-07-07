@@ -19,6 +19,7 @@ const root = {
 // 一层一层遍历
 function bfs(root) {
     let queue = []
+    let res = []
     queue.push(root)
     while (queue.length) {
         let top = queue.shift()
@@ -28,6 +29,7 @@ function bfs(root) {
         if (top.right) {
             queue.push(top.right)
         }
-        console.log(top.val);
+        res.push(top.val)
     }
+    return res
 }
